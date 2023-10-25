@@ -105,3 +105,21 @@ function stopTimer() {
     isTimerStopped = false;
   }
 }
+
+// ALARM SOUND
+
+function playSound() {
+  let sound = document.getElementById("timerTone");
+  sound.play();
+}
+
+// Extend Time
+
+function extendTime() {
+  min = Number(min) + 2;
+  if (min > 9) {
+    document.getElementById("min").innerHTML = min;
+  } else {
+    document.getElementById("min").innerHTML = "0" + min;
+  }
+}
